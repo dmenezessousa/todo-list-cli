@@ -47,11 +47,11 @@ while(toDo){
         console.log('Which to-do item would you like to complete?');
         let done = Number(prompt(''));
         array[done - 1].completed = true;
-    // }else if(answer == option3){
-    //     console.log('~ Deleting a to-do item ~');
-    //     console.log('Which to-do item would you like to Delete?');
-    //     let done = Number(prompt(''));
-    //     array.splice(done - 1, 1);
+    }else if(answer == option3){
+        console.log('~ Deleting a to-do item ~');
+        console.log('Which to-do item would you like to Delete?');
+        let done = Number(prompt(''));
+        array.splice(done - 1, 1);
     }else if(answer == 666){
         toDo = false;
     }
