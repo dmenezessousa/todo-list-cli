@@ -10,8 +10,6 @@ let array = [];
 let option1 = 1;
 let option2 = 2;
 let option3 = 3;
-let todoCount = 0;
-let todoComplete = [];
 let toDo = true;
 
 
