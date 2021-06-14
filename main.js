@@ -38,7 +38,7 @@ while(toDo){
         console.log('~ Creating a new to-do item ~');
         console.log('What is this to-do item called?');
         createToDo = prompt('');
-        let newTodo = {'todo': createToDo, 'completed' : false};
+        let newTodo = {'todo': createToDo, 'complete' : false};
         array.push(newTodo);
     }else if(answer == option2){
         console.log('~ Completing a to-do item ~');
