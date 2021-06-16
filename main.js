@@ -17,8 +17,14 @@ let array = [];
 let option1 = 1;
 let option2 = 2;
 let option3 = 3;
+let option4 = 4;
 let toDo = true;
 
+//not working yet ========================================================================================================
+// const currentDate = new Date("2021-06-16");
+// const timestamp = currentDate.getTime();
+// const currentTime = new Date(2021,5,16,10,10,0,0);
+// console.log(currentTime.getTime());
 //=======================================================================================================================
 
 //Greed User 
@@ -45,6 +51,7 @@ while(toDo){
     console.log('[1] Create a to-do item');
     console.log('[2] Complete a to-do item');
     console.log('[3] Delete a to-do item');
+    console.log('[4] Uncomplete a to-do item')
     let answer = Number(prompt(''));
     
     //Ask for the options/answers =====================================================================================
@@ -54,21 +61,25 @@ while(toDo){
         console.log('What is this to-do item called?');
         createToDo = prompt(''); // store inputs
         let newTodo = {'todo': createToDo, 'complete' : false}; //multi arrays.
-        array.push(newTodo); // add to arrays
+        array.push(newTodo); // add arrays to  main array.
     }else if(answer == option2){
         console.log('~ Completing a to-do item ~');
         console.log('Which to-do item would you like to complete?');
         let done = Number(prompt(''));
-        array[done - 1].completed = true; // change false statment to true so incomplete to complete.
+        array[done - 1].completed = true; // change false statment to true, incomplete to complete.
     }else if(answer == option3){
         console.log('~ Deleting a to-do item ~');
         console.log('Which to-do item would you like to Delete?');
         let done = Number(prompt(''));
-        array.splice(done - 1, 1); // used to remove one item from the TODO list.
-        
-        // To kill Loop =============================================================================================
-        
-    }else if(answer == 666){
+        array.splice(done - 1, 1); // used to remove one item from the TODO list.         
+    }else if(answer == option4){
+        console.log('~ Uncomplete a complete to-do item ~');
+        console.log('Which to-do item would you like to Uncomplete?');
+        let done = Number(prompt(''));
+        array[done - 1].completed = false; // change true statment to false, incomplete to complete.
+    }
+    //kill Loop =========================================================================================================
+    else if(answer == 666){
         toDo = false;
     }
 }
